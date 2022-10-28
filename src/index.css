@@ -74,6 +74,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 200px;
+  height:300px;
   box-shadow: 2px 2px;
   padding: 20px;
   background-color: skyblue;
@@ -100,6 +101,16 @@ button {
   padding: 10px;
   margin: 10px;
   margin-bottom: 20px;
+  
+}
+button:active {
+  border-color: red;
+} 
+button:focus {
+  border-color: skyblue;
+} 
+button:hover {
+  background-color: skyblue;
 }
 
 .buttons {
@@ -144,4 +155,17 @@ button {
   padding: 5px;
   background-color: #5f0383;
   color: #fff;
+
 }
+
+.scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  justify-content: center;
+}
+.user-grid {
+  margin: 15px;
+}
+
+

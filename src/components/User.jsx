@@ -28,6 +28,8 @@ function User() {
   return (
     <div className="content">
       <h1>User Cards</h1>
+      <div className="parent">
+        <div className="scroll">
       {user.slice(skip, skip + numPerPage).map((each) => {
         const { name, phone, dob, picture } = each;
         return (
@@ -48,7 +50,9 @@ function User() {
           </div>
         );
       })}
-
+      </div>
+      </div>
+  
       <div className="buttons">
         {
           <button
