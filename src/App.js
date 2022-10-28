@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Layout from "./components/Layout";
 import About from "./components/About";
 import User from "./components/User";
+import ProfileCard from "./components/ProfileCard";
 
 export class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/user" element={<User />} />
+        <Route path="/profile" element={<ProfileCard />} />
       </Routes>
     </div>
   );

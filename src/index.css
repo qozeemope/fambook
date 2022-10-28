@@ -1,14 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Shalimar&display=swap");
+
 body {
   margin: 0;
   height: 100vh;
-  font-family: "Inter", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+.wellcome {
+  text-align: center;
+  font-weight: bold;
+}
+
+.home-bg {
+  background-image: url("../src/assets/family.jpg");
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #00000080; */
+  /* background-color: palevioletred; */
+  background: linear-gradient(to right, grey, #5f0383, #33fb8b, #00000080);
+  padding-inline: 50px;
+}
+
+.logo {
+  font-family: "Shalimar", cursive;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #00000080;
 }
 
 .navlink {
@@ -17,15 +53,95 @@ body {
 }
 
 .navlink:hover {
-  color: white;
+  color: #ffffff80;
+}
+
+.navlink:active {
+  color: #ffffff20;
+}
+
+.navlink:focus {
+  color: #fff;
 }
 
 .content {
-  margin-left: 50px;
+  padding-top: 50px;
+  padding-inline: 50px;
 }
 
 .user {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid;
+  align-items: center;
+  width: 200px;
+  box-shadow: 2px 2px;
+  padding: 20px;
+  background-color: skyblue;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.user-image {
+  border-radius: 100%;
+  margin-bottom: 0;
+}
+
+.user-details {
+  text-align: center;
+}
+
+.phone {
+  font-weight: bold;
+  margin-top: 0;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  justify-items: center;
+  /* align-items: center; */
+  gap: 400px;
+}
+
+.user-head {
+  text-align: center;
+}
+
+.share-button,
+.get-started {
+  border-radius: 10px;
+  border: none;
+  background-color: blueviolet;
+  color: #fff;
+  padding: 12px;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-link:hover {
+  background: linear-gradient(to right, grey, #5f0383, #33fb8b, #00000080);
+  padding: 5px;
+  color: lightblue;
+}
+
+.update-head {
+  padding: 5px;
+  background-color: #5f0383;
+  color: #fff;
 }

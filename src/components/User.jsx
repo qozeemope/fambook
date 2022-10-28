@@ -27,47 +27,61 @@ function User() {
 
   return (
     <div className="content">
+      <h1>User Cards</h1>
       {user.slice(skip, skip + numPerPage).map((each) => {
-        const { name, phone, dob, login } = each;
+        const { name, phone, dob, picture } = each;
         return (
-          <div className="user">
-            <h1>{name.first}</h1>
-            <h2>{name.last}</h2>
-            <h2>{phone}</h2>
+          <div className="user-grid">
+            <div className="user">
+              <img
+                src={picture.large}
+                alt="image of a human"
+                width="150px"
+                className="user-image"
+              />
+              <h3 className="user-details">
+                Name: {name.first} {""}
+                {name.last}
+              </h3>
+              <p className="phone">Phone: {phone}</p>
+            </div>
           </div>
         );
       })}
-      {
-        <button
-          className="prev"
-          onClick={() => {
-            setPage((prev) => prev - 1);
-          }}
-          disabled={page <= 1}
-          arial-disabled={page <= 1}
-        >
-          Prev
-        </button>
-      }
-      {Array.from({ length: pages }, (value, index) => index + 1).map(
-        (each) => (
-          <button className="btn1" onClick={() => setPage(each)}>
-            {each}{" "}
+
+      <div className="buttons">
+        {
+          <button
+            className="prev"
+            onClick={() => {
+              setPage((prev) => prev - 1);
+            }}
+            disabled={page <= 1}
+            arial-disabled={page <= 1}
+          >
+            Prev
           </button>
-        )
-      )}
-      {
-        <button
-          className="next"
-          onClick={() => {
-            setPage((next) => next + 1);
-          }}
-          disabled={page >= pages}
-          arial-disabled={page >= pages}
-        >
-          Next
-        </button>
-      }
+        }
+        {Array.from({ length: pages }, (value, index) => index + 1).map(
+          (each) => (
+            <button className="btn1" onClick={() => setPage(each)}>
+              {each}{" "}
+            </button>
+          )
+        )}
+        {
+          <button
+            className="next"
+            onClick={() => {
+              setPage((next) => next + 1);
+            }}
+            disabled={page >= pages}
+            arial-disabled={page >= pages}
+          >
+            Next
+          </button>
+        }
+      </div>
     </div>
   );
 }
